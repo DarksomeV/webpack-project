@@ -126,6 +126,7 @@ elements.recipe.addEventListener('click', e => {
 	if (e.target.closest('button.recipe__love')) controlLike();
 });
 
+//подгружаем при перезагрузке страницы
 window.addEventListener('load', () => {
   //берем с локалсторадж
   for (let i = 0; i < localStorage.length-1; i++) {
