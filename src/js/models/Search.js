@@ -6,15 +6,15 @@ export default class Search{
 		this.result = {};
 	}
 //https://cors-anywhere.herokuapp.com/
-	async getResult() {
-		const key = '8843c04bc3db1345d7e603e6e53e0e11';
-		try {
+async getResult() {
+	const key = '8843c04bc3db1345d7e603e6e53e0e11';
+	try {
       // const res = await fetch(`${proxy}${api}/search?key=${key}&q=${this.query}`);
       const res = await fetch(`${proxy}${api}/search?key=${key}&q=${this.query}`);
       const data = await res.json();
       return this.result = data.recipes;
-    } catch (error) {
-      alert(error);
+     } catch (error) {
+     	alert(error);
+     }
     }
-	}
-}
+   }
